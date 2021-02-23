@@ -21,6 +21,13 @@ Route::get('/info_name', function () {
     return view('info_name');
 });
 
+Route::get('/info_sure', function () {
+    return view('info_sure');
+});
+
+Route::get('/info_age/{age?}', function ($age = null) {
+    return "My age is ". $age;
+})-> where ('age', '[0-9]+');
 
 
 
